@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
@@ -9,13 +10,14 @@ import { MAP_KEY } from './../config';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
   ],
   imports: [
     BrowserModule,
     AgmCoreModule.forRoot({
       apiKey: MAP_KEY
-    })
+    }),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
