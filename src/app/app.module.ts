@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 
 
 import { AppComponent } from './app.component';
+import { AgmCoreModule } from '@agm/core';
+import { MAP_KEY } from './../config';
 
 
 @NgModule({
@@ -10,7 +12,10 @@ import { AppComponent } from './app.component';
     AppComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    AgmCoreModule.forRoot({
+      apiKey: MAP_KEY
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
